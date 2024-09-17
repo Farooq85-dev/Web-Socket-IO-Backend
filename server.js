@@ -24,6 +24,10 @@ app.use(
 // Using Express JSON To Parse Data
 app.use(express.json({ limit: "15kb" }));
 
+app.get("/hello", (req, res) => {
+  res.send("--- Hello World ---");
+});
+
 // Using Express URL-Encoded Middleware
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 
