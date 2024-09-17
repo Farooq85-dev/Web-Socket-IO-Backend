@@ -8,7 +8,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "web-socket-io-frontend.vercel.app",
     credentials: true,
   },
 });
@@ -16,7 +16,7 @@ const io = new Server(server, {
 // Using Cors To Allow Request From Any Origin
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "web-socket-io-frontend.vercel.app",
     credentials: true,
   })
 );
